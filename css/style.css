@@ -7,20 +7,29 @@ Font Colour (Black): #0a0a0b
 
 
 
+* {
 
+    box-sizing: border-box;
 
-
-body
-{background-color: #ffffff}
-img {
-  width: 100%;
 }
+
+html {
+    scroll-behaviro: smooth;
+}
+
+
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px; /* Sets the font size to 16px */
   font-weight: 300; /* Sets the font weight to 300 */
   line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
   color: #0a0a0b;
+    background-color: #ffffff
+}
+
+img {
+  width: 100%;
 }
 
 h1, h2, h3, h4 {
@@ -28,7 +37,7 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-size: 2.75em;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
@@ -50,12 +59,9 @@ a {
   color: #ff7f50;
   text-decoration: none; /* No underlining */
 }
-a:hover {
-  color: #cc6540;
-  text-decoration: underline; /* Underlining when hovering over a link */
-}
+
 a:visited { /* visited link */
-  color: #ff7f50;
+  color: #333333;
 }
 a:active { /* selected link */
   color: #994c30;
@@ -65,6 +71,11 @@ a:focus {
   color: #cc6540;
   text-decoration: underline;
 }
+
+
+
+
+
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
   background-color: #ff7f50;
@@ -73,12 +84,15 @@ a:focus {
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid #994c30; /* width of the border, type, color */
-  transition: 0.2s opacity;
+  transition: 0.8s opacity;
 }
+
 .button:hover {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
+      color: #ffffff;
   text-decoration: none;
 }
+
 .button.contact {
   background-color: transparent;
   color: #ff7f50;
@@ -89,9 +103,10 @@ a:focus {
   background-color: #ff7f50;
   color: #ffffff;
 }
-a {/* element selector */
-  color: red;
-}
+
+
+
+
 
 #my-link {/* id selector */
   color: green;
@@ -100,11 +115,18 @@ a {/* element selector */
 .my-link {/* class selector */
   color: blue;
 }
+
+
+
+
+
+
+
 header {
   background-color: #dfe0e1;
   padding: 10px;
   text-align: center;
-  margin: 10px;
+
   border-bottom: 3px solid #4a4a4a;
   box-shadow:         0px 10px 5px 0px rgba(50, 50, 50, 0.75);
   position: fixed;
@@ -112,24 +134,10 @@ header {
 }
 
 
-
-/* Layout styling */
-
-.container {
-  padding: 0 15px;
+.logolink {
+  font-size: 20px
 }
 
-.row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
-}
-
-#hero h1 {
-  text-align: center; /* Centers text */
-}
-
-.logo {
-  max-width: 250px;
-}
 
 nav > ul {
   list-style-type: none;
@@ -138,7 +146,7 @@ nav > ul {
 
 nav > ul > li {
   display: inline-block;
-  width: 100%
+
 }
 
 nav > ul > li > a {
@@ -155,6 +163,31 @@ nav > ul > li > a:visited {
   color: #4a4a4a;
 }
 
+
+
+
+/* Layout styling */
+
+.container {
+  padding: 0 15px;
+       margin: 0 auto;
+
+}
+
+.row {
+  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+    margin-bottom: 20px;
+}
+
+
+
+
+  main {
+    padding-top: 133px;
+  }
+
+
+
 #hero {
   background-color: #dfe0e1;
   padding: 20px 0;
@@ -162,6 +195,138 @@ nav > ul > li > a:visited {
     width: 100%;
   }
 
-  main {
-    padding-top: 133px;
+
+#hero h1 {
+  text-align: center; /* Centers text */
+}
+
+
+
+
+
+footer {
+    padding: 40px 0;
+    background-color: azure;
+}
+
+
+.social-icons {
+
+ display: flex;
+    flex-direction: row;
+        margin: 40px 0;
+
+}
+
+.social-icons a {
+    margin-right: 20px;
+}
+
+
+.social-icons svg {
+
+height: 40px;
+
+}
+
+/*MEDIA QUERIES*/
+
+@media only screen and (min-width: 640px) {
+
+
+    .container {
+          max-width: 1200px;
+         padding: 0 0px;
+
+      }
+
+
+
+    .col-md-6 {
+    width: 48%;
+
   }
+
+    .col-md-6:first-child {
+   padding-right: 25px;
+
+  }
+
+
+
+
+
+  [class*="col-"] {
+    float: left;
+  }
+
+
+   .container .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+
+
+
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+
+     .col-lg-7 {
+    width: 58%;
+    padding-right: 40px;
+
+  }
+
+  .col-lg-5 {
+    width: 38%;
+
+
+  }
+
+
+
+      main {
+    padding-top: 163px;
+  }
+
+  @keyframes color-change {
+    from {fill: #edc655;}
+    to {fill: #f76414;}
+  }
+
+  .sun {
+    animation: 4s color-change infinite alternate linear;
+  }
+
+  @keyframes cloud-move {
+    from {transform: translate(0,50px);}
+    to {transform: translate(200px,50px);}
+  }
+
+  .cloud-front {
+    animation: 30s cloud-move infinite alternate linear;
+  }
+
+  @keyframes cloud-move-reverse {
+    from {transform: translate(446px,48px);}
+    to {transform: translate(100px, 48px);}
+  }
+
+  .cloud-back {
+    animation: 34s cloud-move-reverse infinite alternate linear;
+  }
+
+
+
+
+
+
+
+}
