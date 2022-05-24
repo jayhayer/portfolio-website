@@ -323,7 +323,12 @@ height: 40px;
     animation: 34s cloud-move-reverse infinite alternate linear;
   }
 
+  .me {
 
+  max-width: 450px;
+  display: block;
+  margin: 0 auto;
+  }
 
 
 
