@@ -61,7 +61,7 @@ a {
 }
 
 a:visited { /* visited link */
-  color: #333333;
+  color: #ffffff;
 }
 a:active { /* selected link */
   color: #994c30;
@@ -87,11 +87,14 @@ a:focus {
   transition: 0.8s opacity;
 }
 
-.button:hover {
+.button:hover, .button:active {
   opacity: 0.8; /* Reduces the opacity of the button to 80% */
       color: #ffffff;
   text-decoration: none;
 }
+
+
+
 
 .button.contact {
   background-color: transparent;
@@ -125,7 +128,7 @@ a:focus {
 header {
   background-color: #dfe0e1;
   padding: 10px;
-  text-align: center;
+
 
   border-bottom: 3px solid #4a4a4a;
   box-shadow:         0px 10px 5px 0px rgba(50, 50, 50, 0.75);
@@ -135,7 +138,9 @@ header {
 
 
 .logolink {
-  font-size: 20px
+  font-size: 20px;
+  color: #0a0a0b;
+
 }
 
 
@@ -331,7 +336,7 @@ height: 40px;
   }
 
 
-
+<script type="text/javascript" src="js/scripts.js"></script>
 
 
 }
