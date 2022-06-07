@@ -78,7 +78,7 @@ a:focus {
 
 .button {
   display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
-  background-color: #ff7f50;
+  background-color: #FF6127;
   color: #ffffff; /* needed to override the default link color */
   font-weight: 400;
   padding: 10px;
@@ -92,6 +92,7 @@ a:focus {
       color: #ffffff;
   text-decoration: none;
 }
+
 
 
 
@@ -408,6 +409,7 @@ height: 40px;
   display: block;
   margin: 0 auto;
   }
+
 
 
 
